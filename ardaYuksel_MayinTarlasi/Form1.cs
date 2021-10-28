@@ -16,9 +16,10 @@ namespace ardaYuksel_MayinTarlasi
         {
             InitializeComponent();
         }
-
+        int puan;
         private void btnUret_Click(object sender, EventArgs e)
         {
+
             Random rnd = new Random();
             List<int> mayinlar = new List<int>();
             for (int i = 1; mayinlar.Count < 2; i++)
@@ -39,7 +40,7 @@ namespace ardaYuksel_MayinTarlasi
                 }
                 else
                 {
-                    btn.Tag = false; 
+                    btn.Tag = false;
                 }
                 btn.Click += Btn_Click;
                 flowLayoutPanel1.Controls.Add(btn);
@@ -54,11 +55,19 @@ namespace ardaYuksel_MayinTarlasi
             if (mayin)
             {
                 basilanbuton.BackColor = Color.Red;
+                basilanbuton.Enabled = false;
+                MessageBox.Show("Mayın bulundu");
+                puan -= 20;
+                lblPuan.Text = puan.ToString();
             }
             else
             {
                 basilanbuton.BackColor = Color.Green;
+                puan += 10;
+                lblPuan.Text = puan.ToString();
             }
+
         }
     }
 }
+

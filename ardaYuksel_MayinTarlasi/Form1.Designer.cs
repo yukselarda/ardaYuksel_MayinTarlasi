@@ -31,6 +31,7 @@ namespace ardaYuksel_MayinTarlasi
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnUret = new System.Windows.Forms.Button();
+            this.lblPuan = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -50,16 +51,26 @@ namespace ardaYuksel_MayinTarlasi
             this.btnUret.UseVisualStyleBackColor = true;
             this.btnUret.Click += new System.EventHandler(this.btnUret_Click);
             // 
+            // lblPuan
+            // 
+            this.lblPuan.AutoSize = true;
+            this.lblPuan.Location = new System.Drawing.Point(753, 100);
+            this.lblPuan.Name = "lblPuan";
+            this.lblPuan.Size = new System.Drawing.Size(0, 15);
+            this.lblPuan.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 465);
+            this.Controls.Add(this.lblPuan);
             this.Controls.Add(this.btnUret);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -67,6 +78,7 @@ namespace ardaYuksel_MayinTarlasi
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnUret;
+        private System.Windows.Forms.Label lblPuan;
     }
 }
 
